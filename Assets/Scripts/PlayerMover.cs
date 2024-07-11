@@ -3,9 +3,10 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMover : MonoBehaviour
 {
-    private Rigidbody2D _rigidbody;
     [SerializeField] private float _speedX = 1f;
     [SerializeField] private float _speedY = 0f;
+    private Rigidbody2D _rigidbody;
+    
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
