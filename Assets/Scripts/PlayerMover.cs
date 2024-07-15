@@ -4,7 +4,6 @@ using UnityEngine;
 public class PlayerMover : MonoBehaviour
 {
     [SerializeField] private float _speedX = 1f;
-    [SerializeField] private float _speedY = 0f;
     private Rigidbody2D _rigidbody;
     
     private void Start()
@@ -14,6 +13,6 @@ public class PlayerMover : MonoBehaviour
 
     private void Update()
     {
-        _rigidbody.velocity = new Vector2(_speedX, _speedY);
+        _rigidbody.velocity = new Vector2(_speedX, _rigidbody.velocity.y);
     }
 }
