@@ -247,7 +247,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89645f023a7415647b92f6587a8e5f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedX: 1
+  _speedX: 3
+  _jumpForce: 500
 --- !u!50 &1081066994
 Rigidbody2D:
   serializedVersion: 4
@@ -342,8 +343,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &1081066997
-CircleCollider2D:
+--- !u!70 &1081066997
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -375,8 +376,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 1}
+  m_Direction: 0
 --- !u!1 &1593461386
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,7 +391,7 @@ GameObject:
   - component: {fileID: 1593461389}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
